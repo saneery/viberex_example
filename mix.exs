@@ -22,7 +22,7 @@ defmodule ViberexExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:viberex, "~> 0.1.0"}
+      {:viberex, "~> 0.2.1"}
     ]
   end
 end

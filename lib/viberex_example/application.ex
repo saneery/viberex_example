@@ -7,7 +7,7 @@ defmodule ViberexExample.Application do
     import Supervisor.Spec
 
     children = [
-      worker(ViberexExample.Server, []),
+      worker(ViberexExample.Server, ["viber/webhook", 4000]),
     ]
 
     opts = [strategy: :one_for_one, name: ViberexExample.Supervisor]
