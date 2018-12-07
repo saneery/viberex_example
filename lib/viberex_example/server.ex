@@ -1,7 +1,7 @@
 defmodule ViberexExample.Server do
   use Viberex.Server
 
-  @times %{
+  @offsets %{
     "London" => 0,
     "Tokyo" => 9,
     "Moscow" => 3
@@ -43,7 +43,7 @@ defmodule ViberexExample.Server do
   end
 
   defp get_time(city) do
-    case Map.get(@times, city) do
+    case Map.get(@offsets, city) do
       offset when is_integer(offset) ->
         city_time =
           DateTime.utc_now()
